@@ -1,0 +1,396 @@
+@font-face {
+    font-family: 'Supercell-Magic';
+    src: url('https://online-fonts.com/fonts/clash-royale-mobile-ui') format('Clash Text Regular 400'),
+         url('https://online-fonts.com/fonts/clash-royale-mobile-ui') format('Clash Text Regular 400');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.navigation {
+    display: flex;
+    align-items: center;
+    background-color: #ff0000;
+    padding: 15px 40px;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    font-family: 'Poppins', sans-serif;
+}
+#logo {
+    display: block;
+}
+.nav-links {
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Poppins', sans-serif;
+}
+.nav-right {
+    display: flex;
+    position: absolute;
+    right: 40px;
+}
+.btn-option {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 28px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.btn-option:hover {
+    transform: scale(1.2);
+}
+.navigation a {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 28px;
+}
+.hook {
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-top: 1px;
+}
+.hook h1 {
+    font-size: 50px;
+    margin: 1px 0;
+  background-image: linear-gradient(to left, rgb(255, 0, 0), #ff6969, #fc8b8b, rgb(255, 0, 0));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+footer {
+    background-color: #e7e0e0;
+    color: rgb(255, 0, 0);
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+    width: 100%;
+    z-index: 100;
+}
+.hook2 {
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 1px;
+}
+.small-box {
+    width: 250px;
+    height: 100px;
+    background-color: #8b7c7c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    align-items: baseline;
+}
+
+
+.article-box {
+  border: 2px solid #ff0000;
+  padding: 10px;
+  margin: 10px 0;
+}
+.stats-actuels-box {
+    border: 2px solid #ff0000;
+    padding: 10px;
+    margin: 10px 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding-top: 110px;
+  padding-bottom: 0;
+}
+section {
+  zoom: 1.10;
+  text-align: center;
+  display: flex;
+  align-self:center;
+  flex-direction: column;
+    align-items: center;
+}
+article {
+  padding: 20px;
+  margin: 30px;
+  background: rgb(255, 239, 239);
+  text-align: left;
+  max-width: 1000px;
+  border: 2px solid #ffc6c6;
+  border-radius: 8px;
+  font-size: 25px;
+}
+article a {
+  color: #2600ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+article img {
+  border-radius: 8px;
+  margin: 15px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  article {
+    padding: 15px;
+    margin: 10px 5px;
+    font-size: 14px;
+  }
+  article img {
+    max-width: 100%;
+  }
+  .navigation a {
+    font-size: 18px;
+  }
+  .nav-links {
+    gap: 20px;
+  }
+}
+h2 {
+  color: #ff1100;
+}
+.back-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+.description-box {
+  padding: 0px;
+  margin: 0px 0;
+  justify-content: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    color: #ff0000;
+}
+.video-and-description-box {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.video-and-description-box video {
+  flex: 1;
+  justify-content: center;
+  margin-left: 800px;
+}
+h1 {
+    color: #e90000;
+    text-align: center;
+    justify-content: center;
+    display: block;
+    padding: 10px;
+    margin-bottom: 20px;
+    
+}
+.autoplay-centered-video {
+    display: block;
+    margin: 0 auto;
+}
+.contact-box {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 30px;
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .contact-box h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    .contact-box input, 
+    .contact-box textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+    .contact-box input:focus, 
+    .contact-box textarea:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0,123,255,0.3);
+    }
+    .contact-box button {
+        width: 100%;
+        padding: 12px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .contact-box button:hover {
+        background-color: #0056b3;
+    }
+    .choix-de-saison-button {
+        display: block;
+        width: 300px;
+        padding: 10px;
+        background-color: #ff0000;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        position: fixed;
+        right: 20px;
+        z-index: 1000;
+        margin: 10px 0;
+    }
+    
+    .choix-de-saison-button:nth-of-type(1) {
+        top: 100px;
+    }
+    
+    .choix-de-saison-button:nth-of-type(2) {
+        top: 160px;
+    }
+        .choix-de-saison-button:nth-of-type(3) {
+        top: 220px;
+    }
+        .choix-de-saison-button:nth-of-type(4) {
+        top: 280px;
+    }
+        .choix-de-saison-button:nth-of-type(5) {
+        top: 340px;
+    }
+        .choix-de-saison-button:nth-of-type(6) {
+        top: 400px;
+    }
+        .choix-de-saison-button:nth-of-type(7) {
+        top: 460px;
+    }
+        .choix-de-saison-button:nth-of-type(8) {
+        top: 520px;
+    }
+    .choix-de-saison-button:hover {
+        background-color: #cc0000;
+    }
+    .choix-de-saison-button:active {
+        background-color: #990000;
+    }
+    .choix-de-saison-button:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(255,0,0,0.5);
+    }
+    .choix-de-saison-button:disabled {
+        background-color: #b5b5be;
+        color: #b4b6d4;
+        cursor: not-allowed;
+    }
+    .choix-de-saison-button:disabled p {
+        color: hsl(235, 37%, 80%);
+    }
+    .choix-de-saison-button p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        margin : 0;
+        font-weight: bold;
+    }
+.article-dernieres-nouveautes-box {
+    border : 2px solid #1900ff;
+    padding: 10px;
+    margin: 10px 0;
+    border-width: 50px;
+}
+  .conteneur {
+    display: flex;               
+    gap: 20px;                   
+    flex-wrap: wrap;     
+    justify-content: center;
+    padding: 2px;
+    margin-top: 1px;
+    text-align: center;
+  }
+
+  .box {                   
+    width: 500px;
+    height: 800px;
+    background-color: #f9f9f9;
+  }
+  .box-wiki {
+    width: 400px;
+    height: 200px;
+    background-color: #f9f9f9;
+  }
+  video {
+    border: 5px solid #ff0000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    max-width: 100%;
+    height: auto;
+    }
+.conteneur a {
+    text-decoration: none;
+    color: #ff0000;
+}
+.conteneur a :visited {
+    color: #ff0000;
+}
+.arrire-image-pour-site {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+button {
+ border: none;
+ border-radius: 20px;
+ background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+ transition: all 1.5s ease;
+ font-family: 'Ropa Sans', sans-serif;
+ font-weight: bold;
+ letter-spacing: 0.05rem;
+ padding: 0;
+ size: 150px 150px;
+}
+.back-page-image {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
