@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Clash Royale Statut</title>
+    <style>
+        body { background-color: #0b132b; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background: #1c2541; padding: 30px; border-radius: 15px; border: 2px solid #3a506b; text-align: center; width: 300px; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        .name { font-size: 1.8rem; color: #6fffe9; margin: 10px 0; text-transform: uppercase; }
+        .trophies { font-size: 2.5rem; color: #f9d423; font-weight: bold; margin: 10px 0; }
+        .error-msg { color: #ff4d4d; font-size: 0.9rem; margin-top: 10px; border: 1px solid #ff4d4d; padding: 5px; display: none; }
+        .loading { color: #5bc0be; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div id="status" class="loading">Connexion à l'arène...</div>
+        
+        <div id="profile-data" style="display:none;">
+            <div id="p-name" class="name">JOUEUR</div>
+            <div id="p-clan" style="color: #bdc3c7;">Clan</div>
+            <div id="p-trophies" class="trophies">0 🏆</div>
+            <div style="font-size: 0.8rem; color: #5bc0be;">MEILLEUR : <span id="p-best">0</span></div>
+        </div>
+
+        <div id="error-box" class="error-msg"></div>
+    </div>
+
+    <script>
+        // ================= CONFIGURATION =================
+        const TAG = '#G9YV9GR8R';     // Remplace par ton tag (ex: #PYR88)
+        const TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImMwNjVmZGYzLTk2MDAtNDkyYS1hOWJkLTZmOTFhNWRhNjlhOCIsImlhdCI6MTc3MTAxNjA4NSwic3ViIjoiZGV2ZWxvcGVyLzJiOWY5MTA0LWVhM2EtNzQ2Mi1hNjhhLTQzMDU0MzdhYmE0NiIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIwLjAuMC4wIl0sInR5cGUiOiJjbGllbnQifV19.k7sMMab-cYZa5qWONd5vj3ZVaS0bmj7OYrE3QF_KOk9yHnkTnvjzgjyiGN1X5znFyD4bbFximDFaI2FQrGbONw'; // Remplace par ta clé API
+        // =================================================
+
+        async function getStats() {
+            const status = document.getElementById('status');
+            const errorBox = document.getElementById('error-box');
+            const cleanTag = TAG.replace('#', '%23');
+            
+            // URL de l'API Supercell via un proxy pour éviter le blocage IP/CORS
+            const apiTarget = `https://api.clashroyale.com/v1/players/${cleanTag}`;
+            const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(apiTarget)}`;
+
+            try {
+                const response = await fetch(proxyUrl);
+                const result = await response.json();
+                
+                // On déballe les données envoyées par le proxy
+                const data = JSON.parse(result.contents);
+
+                if (data.reason === "accessDenied") {
+                    throw new Error("Clé API invalide ou IP non autorisée.");
+                } else if (data.reason === "notFound") {
+                    throw new Error("Tag du joueur introuvable.");
+                }
+
+                // Affichage des données
+                document.getElementById('p-name').innerText = data.name;
+                document.getElementById('p-clan').innerText = data.clan ? data.clan.name : "Sans Clan";
+                document.getElementById('p-trophies').innerText = data.trophies + " 🏆";
+                document.getElementById('p-best').innerText = data.bestTrophies + " 🏆";
+
+                status.style.display = 'none';
+                document.getElementById('profile-data').style.display = 'block';
+
+            } catch (err) {
+                status.style.display = 'none';
+                errorBox.style.display = 'block';
+                errorBox.innerText = "ERREUR : " + err.message;
+                console.error(err);
+            }
+        }
+
+        getStats();
+    </script>
+</body>
+</html>

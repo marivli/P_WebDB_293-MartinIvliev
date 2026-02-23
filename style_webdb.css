@@ -165,7 +165,8 @@ footer {
 
 .card-text {
   color: #ffffff;
-  font-size: 1.1rem;
+  font-size: 20px;
+  max-width: 1200px;
   line-height: 1.6;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -514,6 +515,33 @@ button a {
     text-align: center;
 }
 .arrow-left-down {
+        position: fixed;
+    bottom: 20px;
+    left: 20px;   
+    z-index: 9999;   
+    width: 60px;  
+    height: auto;
+}
+.cr-margin {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.cr-margin img {
+    width: 130px;
+    height: auto;
+}
+.card-menu-bottom {
+    display: flex;
     position: fixed;
-    margin-left: -650px;
+    bottom: 0;
+    left: 34.3%;
+    z-index: 9999;   
+   width: 600px;
+   height: 80px;
+   justify-content: center;
 }
