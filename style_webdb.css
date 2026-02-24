@@ -266,15 +266,7 @@ h2 {
   justify-content: center;
   margin-left: 800px;
 }
-h1 {
-    color: #e90000;
-    text-align: center;
-    justify-content: center;
-    display: block;
-    padding: 10px;
-    margin-bottom: 20px;
-    
-}
+
 .autoplay-centered-video {
     display: block;
     margin: 0 auto;
@@ -535,13 +527,70 @@ button a {
     width: 130px;
     height: auto;
 }
-.card-menu-bottom {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 34.3%;
+
+.left-image-banner {
+    position: static;
+    top: 10%;
+    left: 0;
     z-index: 9999;   
-   width: 600px;
-   height: 80px;
-   justify-content: center;
+}
+.left-banner-et-rp {
+  position: relative;
+}
+
+.pass-royale-link {
+  top: 0px;
+  right: 0px;
+  z-index: 99;
+  cursor: pointer;
+  margin-left: 840px;
+}
+
+.pass-royale-img {
+  width: 470px;
+  height: auto;
+  transition: transform 0.3s ease;
+  margin-top: 0px;
+}
+
+.pass-royale-img:hover {
+  transform: scale(1.1);
+}
+
+.left-banner-text {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #ffffff;
+    border: #333 solid 1px;
+padding: 0 10px;
+width: 573px;
+font-weight: bold;
+}
+.left-banner-text h1 {
+  font-size: 40px;
+   background-image: linear-gradient(to right, yellow, orange, yellow, orange, yellow);
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  -webkit-background-clip: text;
+  background-clip: text;
+ 
+  color: transparent;
+}
+.play-link {
+
+  top: 70px;
+  right: 20px;
+  z-index: 99;
+  cursor: pointer;
+}
+.play-img {
+    width: 200px;
+  height: auto;
+  transition: transform 0.3s ease;
+  margin-left: 850px;
+}
+.play-img:hover {
+  transform: scale(1.1);
 }
