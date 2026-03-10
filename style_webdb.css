@@ -1,39 +1,50 @@
-@font-face {
-    font-family: 'Supercell-Magic';
-    src: url('https://online-fonts.com/fonts/clash-royale-mobile-ui') format('Clash Text Regular 400'),
-         url('https://online-fonts.com/fonts/clash-royale-mobile-ui') format('Clash Text Regular 400');
-    font-weight: normal;
-    font-style: normal;
-}
 * {
-    margin: 0;
+    max-width: auto;
     padding: 0;
     box-sizing: border-box;
     font-family: "Bungee", sans-serif;
 }
+
 .navigation {
     display: flex;
     align-items: center;
+    justify-items: center;
     background-color: #ff0000;
     padding: 10px 40px;
-    justify-content: space-between;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 100;
-    font-family: "Bungee", sans-serif;
+    justify-content: center;
 }
-#logo {
-    display: block;
-}
+
 .nav-links {
     display: flex;
-    gap: 50px;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    gap: 50px;
     font-family: "Bungee", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .navigation a {
+    font-size: 10px;
+  }
+  .nav-links a {
+    font-size: 10px;
+  }
+  .navigation {
+    font-size: 10px;
+  }
+  .nav-links {
+    font-size: 10px;
+  }
+}
+
+.navigation img {
+    align-self: left;
+    justify-self: left;
+    margin-right: 1700px;
 }
 .nav-right {
     display: flex;
@@ -56,7 +67,6 @@
     font-family: "Bungee", sans-serif;
     text-decoration: none;
     font-weight: bold;
-    font-size: 28px;
 }
 .hook {
     font-weight: bold;
@@ -212,22 +222,7 @@ article img {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-@media (max-width: 768px) {
-  article {
-    padding: 15px;
-    margin: 10px 5px;
-    font-size: 14px;
-  }
-  article img {
-    max-width: 100%;
-  }
-  .navigation a {
-    font-size: 18px;
-  }
-  .nav-links {
-    gap: 20px;
-  }
-}
+
 h2 {
   color: #ff1100;
 }
@@ -430,17 +425,17 @@ h2 {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+   width: 100%;
+   height: 100%;
     z-index: -1;
     object-fit: cover;
     object-position: center;
     margin-top: 70px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     .arrire-image-pour-site {
-        transform: scale(1.1);
+transform: scale(1.1);
     }
 }
 .live-button {
@@ -524,13 +519,27 @@ button a {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    padding: 20px;
+    padding: 0px;
     margin: 0 auto;
 }
 .cr-margin img {
     width: 130px;
     height: auto;
 }
+@media (max-width: 600px){
+    .cr-margin img {
+    width: 80px;
+    height: auto;
+}
+.cr-margin {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+    margin: 0 auto;
+}
+}
+
 
 .left-image-banner {
     position: static;
@@ -543,11 +552,30 @@ button a {
 }
 
 .pass-royale-link {
+  cursor: pointer;
+  margin-left: 840px;
+  width: 300px;
+  height: 100px;
+}
+@media only screen and (max-width: 600px) {
+    .pass-royale-link {
+        width: 400px;
+    }
+}
+@media (max-width: 768px){
+.pass-royale-link {
   top: 0px;
   right: 0px;
   z-index: 99;
   cursor: pointer;
   margin-left: 840px;
+}
+.pass-royale-img {
+  width: 140px;
+  height: auto;
+  transition: transform 0.3s ease;
+  margin-top: 0px;
+}
 }
 
 .pass-royale-img {
@@ -590,30 +618,63 @@ font-family: "Bungee", sans-serif;
   cursor: pointer;
 }
 .play-img {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
     width: 200px;
   height: auto;
   transition: transform 0.3s ease;
-  margin-left: 850px;
-  margin-top: 140px;
 }
 .play-img:hover {
   transform: scale(1.1);
 }
 .option-right-list {
     display: flex;
-    flex-direction: row;
-    gap: 10px;
     justify-content: right;
-    margin-top: -360px;
-    margin-right: 5px;
 }
-.pass-royale-img-right {
+.option-right-list img {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    margin-top: 5px;
     justify-content: right;
+    margin-top: -430px;
     margin-right: 5px;
+    width: 100px;
+    height: 100px;
+}
+@media (max-width: 600px) {
+    .option-right-list img {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-top: -430px;
+    margin-right: 5px;
+    width: 50px;
+    height: 50px;
+    transform: scale(1.1);
+}
+.option-right-list {
+    display: flex;
+    justify-content: right;
+    transform: scale(1.1);
+}
+}
+.pass-royale-img-right img {
+    display: flex;
+    margin-top: 5px;
+    width: 300px;
+    height: 100px;
+    justify-self: right;
+}
+@media (max-width: 600px) {
+    .pass-royale-img-right img {
+    display: flex;
+    margin-top: 5px;
+    width: 100px;
+    height: 100px;
+    justify-self: right;
+}
 }
 .banner-left {
     display: flex;
@@ -653,9 +714,7 @@ font-family: "Bungee", sans-serif;
 }
 .bottom-menu-buttons {
     display: flex;
-    gap: 200px;
-    justify-content: center;
-    margin-top: 5px;
+    justify-content: space-between;
 }
 .deck {
   display: flex;
@@ -728,7 +787,7 @@ font-family: "Bungee", sans-serif;
 }
 h6 {
     display: flex;
-    font-size: 100px;
+    font-size: 50px;
     font-family: "Bungee", sans-serif;
     font-style: normal;
     text-align: center;
@@ -741,7 +800,7 @@ h6 {
     text-align: center;
     font-weight: bold;
     justify-self: center;
-    width: 1300px;
+    width: 700px;
     height: auto;
 }
 .description-perso {
@@ -792,9 +851,6 @@ h6 {
     margin-top: 5px;
     margin-bottom: 5px;
 }
-.teams-box p {
-    
-}
 .teams-box a {
     text-decoration: none;
 }
@@ -812,7 +868,7 @@ h6 {
 .teams-box a {
   text-decoration: none;
   color: rgb(179, 19, 219);
-  transition: color 0.3s; /* Transition douce lors du survol */
+  transition: color 0.3s;
 }
 .all-teams-boxes {
     display: flex;
