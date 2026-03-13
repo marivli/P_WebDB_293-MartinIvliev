@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: "Bungee", sans-serif;
 }
-
+/*partie du haut*/
 .navigation {
     display: flex;
     align-items: center;
@@ -26,18 +26,14 @@
     font-family: "Bungee", sans-serif;
 }
 
-@media (max-width: 768px) {
-  .navigation a {
-    font-size: 10px;
-  }
+@media (max-width: 600px) {
   .nav-links a {
     font-size: 10px;
-  }
-  .navigation {
-    font-size: 10px;
+    gap: 25px;
   }
   .nav-links {
-    font-size: 10px;
+    font-size: 13px;
+    gap: 25px;
   }
 }
 
@@ -331,7 +327,7 @@ h2 {
         z-index: 1000;
         margin: 10px 0;
     }
-    
+    /*partie nouveautes*/
     .choix-de-saison-button:nth-of-type(1) {
         top: 100px;
     }
@@ -540,7 +536,7 @@ button a {
 }
 }
 
-
+/*encore la page d accueil*/
 .left-image-banner {
     position: static;
     top: 10%;
@@ -555,14 +551,10 @@ button a {
   cursor: pointer;
   margin-left: 840px;
   width: 300px;
-  height: 100px;
+  height: auto;
 }
-@media only screen and (max-width: 600px) {
-    .pass-royale-link {
-        width: 400px;
-    }
-}
-@media (max-width: 768px){
+
+@media (max-width: 600px){
 .pass-royale-link {
   top: 0px;
   right: 0px;
@@ -571,7 +563,7 @@ button a {
   margin-left: 840px;
 }
 .pass-royale-img {
-  width: 140px;
+  width: 100px;
   height: auto;
   transition: transform 0.3s ease;
   margin-top: 0px;
@@ -584,11 +576,6 @@ button a {
   transition: transform 0.3s ease;
   margin-top: 0px;
 }
-
-.pass-royale-img:hover {
-  transform: scale(1.1);
-}
-
 .left-banner-text {
   display: flex;
   justify-content: left;
@@ -617,17 +604,42 @@ font-family: "Bungee", sans-serif;
   z-index: 99;
   cursor: pointer;
 }
+
 .play-img {
     display: flex;
     justify-content: center;
     justify-self: center;
     align-self: center;
-    width: 200px;
-  height: auto;
   transition: transform 0.3s ease;
+  
+}
+.play-img img {
+ width: 200px;
+  height: auto;
+  margin-top: -30px;
 }
 .play-img:hover {
   transform: scale(1.1);
+}
+@media (max-width: 600px){ 
+    .play-img {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    margin-top: -10px;
+  transition: transform 0.3s ease;
+}
+.play-img img {
+    width: 100px;
+  height: auto;
+}
+.play-img:hover {
+  transform: scale(1.1);
+}
 }
 .option-right-list {
     display: flex;
@@ -635,44 +647,50 @@ font-family: "Bungee", sans-serif;
 }
 .option-right-list img {
     display: flex;
-    flex-direction: row;
-    gap: 10px;
     justify-content: right;
-    margin-top: -430px;
-    margin-right: 5px;
+    margin-top: -350px;
     width: 100px;
-    height: 100px;
+    height: auto;
+    
 }
 @media (max-width: 600px) {
     .option-right-list img {
+        justify-content: right;
     display: flex;
-    flex-direction: row;
-    justify-content: right;
-    margin-top: -430px;
-    margin-right: 5px;
+    margin-top: -260px;
     width: 50px;
-    height: 50px;
-    transform: scale(1.1);
+    height: auto;
 }
-.option-right-list {
-    display: flex;
+}
+
+.pass-royale-img-right {
+ display: flex;
+    justify-self: right;
     justify-content: right;
-    transform: scale(1.1);
-}
+    justify-items: right;
+
 }
 .pass-royale-img-right img {
     display: flex;
-    margin-top: 5px;
+    margin-top: -250px;
     width: 300px;
-    height: 100px;
-    justify-self: right;
+    height: 130px;
 }
 @media (max-width: 600px) {
+    .pass-royale-img-right {
+ display: flex;
+    justify-self: right;
+    justify-content: right;
+    justify-items: right;
+}
     .pass-royale-img-right img {
     display: flex;
-    margin-top: 5px;
-    width: 100px;
-    height: 100px;
+    align-self: right;
+    justify-content: right;
+    justify-items: right;
+    width: 90px;
+    height: auto;
+    margin-top: -210px;
     justify-self: right;
 }
 }
@@ -682,14 +700,41 @@ font-family: "Bungee", sans-serif;
     justify-content: left;
     width: 500px;
     height: auto;
-    margin-top: -39.6px;
+    margin-top: -35px;
+}
+@media (max-width: 600px) {
+    .banner-left {
+    display: flex;
+    gap: 10px;
+    justify-content: left;
+    width: 200px;
+    height: auto;
+    margin-top: -33px;
+}
 }
 .arene-image {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: -150px 0px;
-    margin-top: 70px;
+    margin: 0px 0px;
+    margin-top: -20px;
+}
+.arene-image img {
+width: 300px;
+    height: auto;
+}
+@media (max-width: 600px) {
+    .arene-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0px 0px;
+    margin-top: -40px;
+}
+.arene-image img {
+    width: 150px;
+    height: auto;
+}
 }
 .banner-text-left {
     display: flex;
@@ -697,15 +742,41 @@ font-family: "Bungee", sans-serif;
     flex-wrap: wrap;
     font-family: "Bungee", sans-serif;
     font-size: 15px;
-    color: #ffffff;
+    background-image: linear-gradient(to right, yellow, orange, yellow, orange, yellow);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     border: #73b0b4 solid 5px;
     padding: 0 10px;
     width: 500px;
     font-weight: bold;
     margin-top: -5px;
 }
+@media (max-width: 600px) {
+    .banner-text-left {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    font-family: "Bungee", sans-serif;
+    font-size: 9px;
+    background-image: linear-gradient(to right, yellow, orange, yellow, orange, yellow);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    border: #73b0b4 solid 5px;
+    width: 200px;
+    font-weight: bold;
+    margin-top: -5px;
+}
 .banner-text-left h1 {
-    font-size: 40px;
+    font-size: 5px;
+}
+}
+    
+.banner-text-left h1 {
+    font-size: 10px;
     background-image: linear-gradient(to right, yellow, orange, yellow, orange, yellow);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     -webkit-background-clip: text;
@@ -716,6 +787,24 @@ font-family: "Bungee", sans-serif;
     display: flex;
     justify-content: space-between;
 }
+.bottom-menu-buttons img {
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+    height: 90px;
+}
+@media (max-width: 600px) {
+    .bottom-menu-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.bottom-menu-buttons img {
+    display: flex;
+    justify-content: space-between;
+    width: 55px;
+    height: 40px;
+}
+}
 .deck {
   display: flex;
     flex-direction: row;
@@ -724,6 +813,7 @@ font-family: "Bungee", sans-serif;
     justify-content: center;
     margin: 10px 0px;
 }
+/*partie cartes qui est le site qui est le 2 eme boutton sur les 5 qui sont en bas au milieu de la page d accueil au debut*/
 .empty-card-slot {
     width: 128px;
     height: 170px;
@@ -766,7 +856,7 @@ font-family: "Bungee", sans-serif;
     color: #aeb3ff;
     font-size: 30px;
     margin-bottom: 10px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Bungee", sans-serif;
     gap: 20px;
     display: inline-block;
 }
@@ -775,7 +865,7 @@ font-family: "Bungee", sans-serif;
     font-size: 18px;
     text-align: center;
     font-weight: bold;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Bungee", sans-serif;
 }
 .description-card-box h4 {
     color: #fffafa;
@@ -783,9 +873,10 @@ font-family: "Bungee", sans-serif;
     margin-top: 20px;
     text-align: center;
     font-weight: bold;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Bungee", sans-serif;
 }
-h6 {
+/*partie description perso en bas du contact*/
+.texte-presentation {
     display: flex;
     font-size: 50px;
     font-family: "Bungee", sans-serif;
@@ -826,6 +917,7 @@ h6 {
     width: 400px;
     height: auto;
     }
+    /*partie e-sports*/
 }
 .teams-box {
     display: flex;
